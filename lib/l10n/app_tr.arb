@@ -1,0 +1,10 @@
+{
+  "language": "Türkçe",
+  "@language": {
+    "description": "Şimdiki dil"
+  },
+  "helloworld": "Merhaba Dünya!",
+  "@helloworld": {
+    "description": "Bir programcı sizi selamlıyor"
+  }
+}
