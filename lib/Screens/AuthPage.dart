@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../Services/AuthService.dart';
 
 class AuthPage extends StatefulWidget {
@@ -18,11 +19,11 @@ class _AuthPageState extends State<AuthPage> {
     return Scaffold(
       body: Center(
         child: OutlinedButton(onPressed: () async{
-
          await Provider.of<Auth>(context,listen: false).signInWithGoogle();
 
         }, child: Text(
-          "Google-Sign"
+          AppLocalizations.of(context).googleSignIn
+
         ),),
       ),
 

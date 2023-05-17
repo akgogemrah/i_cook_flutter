@@ -1,7 +1,9 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:i_do_cook/Model/UserModel.dart';
 import 'package:i_do_cook/Screens/AuthPage.dart';
+import 'package:i_do_cook/Screens/EmailSignUp.dart';
 import 'package:i_do_cook/Services/AuthService.dart';
 import 'package:provider/provider.dart';
 import 'l10n/l10.dart';
@@ -17,6 +19,7 @@ void main() async{
 
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => Auth()),
+    ChangeNotifierProvider(create: (context) => UserModel()),
   ],
   child: const MyApp()));
 }
@@ -27,6 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // Localization arrangements
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -39,7 +43,7 @@ class MyApp extends StatelessWidget {
         // Note: "useMaterial3" is not a valid property for the "theme" attribute.
         // If you are using Material Design 3.0, you don't need to specify this property.
       ),
-      home: AuthPage(),
+      home: SignUpWithEmail(),
     );
   }
 }

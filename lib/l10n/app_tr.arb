@@ -6,5 +6,22 @@
   "helloworld": "Merhaba Dünya!",
   "@helloworld": {
     "description": "Bir programcı sizi selamlıyor"
-  }
+  },
+  "googleSignIn": "Google ile Giriş Yap",
+      "@googleSignIn": {
+        "description": "GoogleSignIn"
+      },
+      "createYourAccount": "Hesap Oluştur",
+              "@createYourAccount": {
+                "description": "hesap oluştur"
+              },
+       "alertDialogOk": "Tamam",
+                   "@alertDiaologOk": {
+                     "description": "Ok in AlertDiolog"
+                   },
+       "alertDialogWarningUserEmail": "Email yada şifrenizi doğru formatta giriniz.(şifre en az 6 kkarakterli olmalıdır)",
+                         "@alertDialogWarningUserEmail": {
+                           "description": "warning user to correct input credentials"
+                         }
+
 }
