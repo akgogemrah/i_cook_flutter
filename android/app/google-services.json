@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "845406674815",
+    "project_id": "i-cook-bca2d",
+    "storage_bucket": "i-cook-bca2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845406674815:android:ecc1590300568a8744844a",
+        "android_client_info": {
+          "package_name": "com.recipe.i_do_cook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845406674815-hgrvh674b06ek3vlrgqmtelnp4nped3e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.recipe.i_do_cook",
+            "certificate_hash": "d560f31031bd72523c3bbc3df8615b1e7af74d62"
+          }
+        },
+        {
+          "client_id": "845406674815-nsu29frbcb36a1u6fn6ten0jl22slp5f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNzb7FMtihEM70TDqaTsgcPPWR20bUUnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845406674815-nsu29frbcb36a1u6fn6ten0jl22slp5f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "845406674815-t17lgn57dm40ugr35fg0of0e9k1gg00k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.iDoCook"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
