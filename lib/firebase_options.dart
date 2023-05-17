@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDqPqURTUi7fudwkNoupa_CtrOSAGp19Vs',
-    appId: '1:193308497671:android:478b8dd7f816d3ccf3d7a2',
-    messagingSenderId: '193308497671',
-    projectId: 'i-cook-b883a',
-    storageBucket: 'i-cook-b883a.appspot.com',
+    apiKey: 'AIzaSyDNzb7FMtihEM70TDqaTsgcPPWR20bUUnY',
+    appId: '1:845406674815:android:ecc1590300568a8744844a',
+    messagingSenderId: '845406674815',
+    projectId: 'i-cook-bca2d',
+    storageBucket: 'i-cook-bca2d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB-igUUHSWKoIDjERTE90-ekgw1fRJBOY8',
-    appId: '1:193308497671:ios:3529c0be1ed24293f3d7a2',
-    messagingSenderId: '193308497671',
-    projectId: 'i-cook-b883a',
-    storageBucket: 'i-cook-b883a.appspot.com',
-    iosClientId: '193308497671-tt49dnt3ind2vg9chr8r57qsahar04pi.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDNrK47ylUP17TP85Qu2d6XqY0_lFT4ccs',
+    appId: '1:845406674815:ios:2e8270a0061318a544844a',
+    messagingSenderId: '845406674815',
+    projectId: 'i-cook-bca2d',
+    storageBucket: 'i-cook-bca2d.appspot.com',
+    iosClientId: '845406674815-t17lgn57dm40ugr35fg0of0e9k1gg00k.apps.googleusercontent.com',
     iosBundleId: 'com.example.iDoCook',
   );
 }
