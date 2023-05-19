@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:i_do_cook/Model/UserModel.dart';
 import 'package:i_do_cook/Screens/AuthPage.dart';
+import 'package:i_do_cook/Screens/EmailSignPage.dart';
 import 'package:i_do_cook/Screens/EmailSignUp.dart';
 import 'package:i_do_cook/Services/AuthService.dart';
 import 'package:provider/provider.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         // Note: "useMaterial3" is not a valid property for the "theme" attribute.
         // If you are using Material Design 3.0, you don't need to specify this property.
       ),
-      home: SignUpWithEmail(),
+      home: AuthPage(),
     );
   }
 }
