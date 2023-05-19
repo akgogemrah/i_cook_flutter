@@ -19,15 +19,18 @@ class _AuthPageState extends State<AuthPage> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     final bool isLargeScreen = size.width > 600;
+    // Background Container
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            "assets/Login1.png"
+            // BackgroundImage
+            "assets/white_Auth.gif"
           ),
           fit: BoxFit.cover
         )
       ),
+      //Scaffold
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Column(
@@ -45,10 +48,11 @@ class _AuthPageState extends State<AuthPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       SizedBox(height: 10,),
+                      //Create Your Recipe Collection
                       Text(
                         AppLocalizations.of(context).createYourRecipes,
                         style: TextStyle(
-                          color: Colors.white,
+                          color: AuthPagetxt,
                           fontSize:40
                         ),
                       ),
@@ -57,103 +61,74 @@ class _AuthPageState extends State<AuthPage> {
                 ),
               ),
             ),
+            // Share Your Recipes Collection
             Text(
               AppLocalizations.of(context).shareYourRecipes,
               style: TextStyle(
-                color: Colors.deepOrange,
+                color:AuthPagetxt,
                 fontSize: 18
 
               ),
             ),
-
-            Expanded(
-              child: Stack(
-                alignment: Alignment.bottomLeft,
-                children: <Widget>[
-                  // phoneMockUp
-                  Positioned(
-                    left: 0,
-                    bottom: 0,
-                    child: Container(
-                      height: 500,
-                      width: 250,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(
-                            "assets/mockup1_google-pixel5-justblack-portrait.png"
-                          ),
-                        )
-                      ),
-
-
-                    ),
+            SizedBox(height: 30,),
+            //SigningGoogle
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  shape: StadiumBorder(),
+                  backgroundColor: Colors.white70
+              ),
+              onPressed: () async {
+                await Provider.of<Auth>(context, listen: false).signInWithGoogle();
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.google,
+                    color: Colors.indigo,
                   ),
-                  // emailLoginButton
-                  Positioned(
-                    left: 115,
-                    bottom: 100,
-
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: StadiumBorder(),
-                        backgroundColor: Colors.white70
-                      ),
-                      onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailSignInPage()));
-                      },
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.email,
-                            color: Colors.indigo,
-                          ),
-                          SizedBox(width: 20,),
-                          Text(
-                              AppLocalizations.of(context).loginWithEmail,
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w700
-                            ),
-                          ),
-                        ],
+                  SizedBox(width: 20,),
+                  Center(
+                    child: Text(
+                      AppLocalizations.of(context).googleSignIn,
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black
                       ),
                     ),
                   ),
-                  //Google Login Button
-                  Positioned(
-                    left: 115,
-                    bottom: 140,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: StadiumBorder(),
-                        backgroundColor: Colors.white70
-                      ),
-                      onPressed: () async {
-                        await Provider.of<Auth>(context, listen: false).signInWithGoogle();
-                      },
-                      child: Row(
-                        children: [
-                          FaIcon(
-                            FontAwesomeIcons.google,
-                            color: Colors.indigo,
-                          ),
-                          SizedBox(width: 20,),
-                          Text(
-                            AppLocalizations.of(context).googleSignIn,
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.black
-
-                            ),
-                          ),
-                        ],
+                ],
+              ),
+            ),
+            //SigningEmail
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  shape: StadiumBorder(),
+                  backgroundColor: Colors.white70
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailSignInPage()));
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.email,
+                    color: Colors.red,
+                  ),
+                  SizedBox(width: 20,),
+                  Center(
+                    child: Text(
+                      AppLocalizations.of(context).loginWithEmail,
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w700
                       ),
                     ),
                   ),
-                  //Container
-                ], //<Widget>[]
-              ), //Stack
+                ],
+              ),
             ),
           ],
         ),
@@ -161,3 +136,4 @@ class _AuthPageState extends State<AuthPage> {
     );
   }
 }
+Color AuthPagetxt=Colors.black;
