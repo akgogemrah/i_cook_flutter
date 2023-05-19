@@ -22,6 +22,17 @@
        "alertDialogWarningUserEmail": "Email yada şifrenizi doğru formatta giriniz.(şifre en az 6 kkarakterli olmalıdır)",
                          "@alertDialogWarningUserEmail": {
                            "description": "warning user to correct input credentials"
-                         }
-
+                         },
+       "loginWithEmail": "Email ile Giriş Yap",
+                                "@alertDialogWarningUserEmail": {
+                                  "description": "Login With Email"
+                                },
+        "shareYourRecipes": "Tariflerini Diğer İnsanlarla Paylaş",
+                                       "@alertDialogWarningUserEmail": {
+                                         "description": "Share Recipes"
+                                       },
+        "createYourRecipes": "Kendi Yemek Tarifi Koleksiyonunu Oluştur",
+                                               "@alertDialogWarningUserEmail": {
+                                                 "description": "Create Recipes"
+                                               }
 }

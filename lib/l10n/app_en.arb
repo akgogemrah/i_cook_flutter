@@ -22,6 +22,18 @@
       "alertDialogWarningUserEmail": "Please make sure to input correct format email or password",
                   "@alertDialogWarningUserEmail": {
                     "description": "warning user to correct input credentials"
-                  }
+                  },
+       "loginWithEmail": "Login With Email",
+                         "@alertDialogWarningUserEmail": {
+                           "description": "Login With Email"
+                         },
+        "shareYourRecipes": "Share Your Recipes With Other People",
+                                "@alertDialogWarningUserEmail": {
+                                  "description": "Share Recipes"
+                                },
+        "createYourRecipes": "Create Your Own Recipes Collection",
+                                                       "@alertDialogWarningUserEmail": {
+                                                         "description": "Create Recipes"
+                                                       }
 
 }
