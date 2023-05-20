@@ -42,7 +42,11 @@
           "passwordButtonTxt": "Password",
                             "@Password": {
                              "description": "PasswordButton"
-                                                                }
+                                                                },
+          "alertDialogWarningUserNotFound": " User not found.Please make sure to input correct format email or password.",
+                "@alertDialogWarningUserEmailNotFound": {
+                 "description": "warning user to correct input credentials"
+                  }
 
 
 }

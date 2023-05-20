@@ -42,6 +42,10 @@
          "passwordButtonTxt": "Şifre",
                                     "@Password": {
                                      "description": "PasswordButton"
-                                                                        }
+                                                   },
+          "alertDialogWarningUserNotFound": "Kullanıcı bulunamadı, lütfen email yada şifrenizi doğru girdiğinizden emin olun",
+                         "@alertDialogWarningUserEmailNotFound": {
+                          "description": "warning user to correct input credentials"
+                           }
 
 }
