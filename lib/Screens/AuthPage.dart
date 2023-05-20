@@ -20,117 +20,125 @@ class _AuthPageState extends State<AuthPage> {
     final Size size = MediaQuery.of(context).size;
     final bool isLargeScreen = size.width > 600;
     // Background Container
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(
-            // BackgroundImage
-            "assets/white_Auth.gif"
-          ),
-          fit: BoxFit.cover
-        )
-      ),
-      //Scaffold
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: Padding(
-                padding: const EdgeInsets.all(30.0),
-                child: Container(
-                  width: 300,
-                  height: 230,
-                  color: Colors.transparent,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+    return MaterialApp(
+      home: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              // BackgroundImage
+              "assets/white_Auth.gif"
+            ),
+            fit: BoxFit.cover
+          )
+        ),
+        //Scaffold
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(30.0),
+                  child: Container(
+                    width: 300,
+                    height: 230,
+                    color: Colors.transparent,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SizedBox(height: 10,),
+                        //Create Your Recipe Collection
+                        Text(
+                          AppLocalizations.of(context).createYourRecipes,
+                          style: TextStyle(
+                            color: AuthPagetxt,
+                            fontSize:40
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              // Share Your Recipes Collection
+              Text(
+                AppLocalizations.of(context).shareYourRecipes,
+                style: TextStyle(
+                  color:AuthPagetxt,
+                  fontSize: 18
+
+                ),
+              ),
+              SizedBox(height: 30,),
+              //SigningGoogle
+              Padding(
+                padding: const EdgeInsets.only(right: 20,left: 20),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: StadiumBorder(),
+                      backgroundColor: Colors.white70
+                  ),
+                  onPressed: () async {
+                    await Provider.of<Auth>(context, listen: false).signInWithGoogle();
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(height: 10,),
-                      //Create Your Recipe Collection
-                      Text(
-                        AppLocalizations.of(context).createYourRecipes,
-                        style: TextStyle(
-                          color: AuthPagetxt,
-                          fontSize:40
+                      FaIcon(
+                        FontAwesomeIcons.google,
+                        color: Colors.indigo,
+                      ),
+                      SizedBox(width: 20,),
+                      Center(
+                        child: Text(
+                          AppLocalizations.of(context).googleSignIn,
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.black
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-            ),
-            // Share Your Recipes Collection
-            Text(
-              AppLocalizations.of(context).shareYourRecipes,
-              style: TextStyle(
-                color:AuthPagetxt,
-                fontSize: 18
-
-              ),
-            ),
-            SizedBox(height: 30,),
-            //SigningGoogle
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: StadiumBorder(),
-                  backgroundColor: Colors.white70
-              ),
-              onPressed: () async {
-                await Provider.of<Auth>(context, listen: false).signInWithGoogle();
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FaIcon(
-                    FontAwesomeIcons.google,
-                    color: Colors.indigo,
+              //SigningEmail
+              Padding(
+                padding: const EdgeInsets.only(left: 20,right: 20),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: StadiumBorder(),
+                      backgroundColor: Colors.white70
                   ),
-                  SizedBox(width: 20,),
-                  Center(
-                    child: Text(
-                      AppLocalizations.of(context).googleSignIn,
-                      style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.black
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailSignInPage()));
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.email,
+                        color: Colors.red,
                       ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            //SigningEmail
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: StadiumBorder(),
-                  backgroundColor: Colors.white70
-              ),
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailSignInPage()));
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.email,
-                    color: Colors.red,
-                  ),
-                  SizedBox(width: 20,),
-                  Center(
-                    child: Text(
-                      AppLocalizations.of(context).loginWithEmail,
-                      style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700
+                      SizedBox(width: 20,),
+                      Center(
+                        child: Text(
+                          AppLocalizations.of(context).loginWithEmail,
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w700
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
