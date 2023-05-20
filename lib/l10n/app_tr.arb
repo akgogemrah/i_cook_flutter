@@ -34,5 +34,9 @@
         "createYourRecipes": "Kendi Yemek Tarifi Koleksiyonunu Oluştur",
                                                "@alertDialogWarningUserEmail": {
                                                  "description": "Create Recipes"
-                                               }
+                                               },
+        "loginButtonTxt": "Login",
+             "@alertDialogWarningUserEmail": {
+             "description": "Create Recipes"
+                       }
 }
