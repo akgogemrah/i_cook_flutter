@@ -38,6 +38,11 @@
          "loginButtonTxt": "Login",
                    "@alertDialogWarningUserEmail": {
                     "description": "Create Recipes"
-                                                       }
+                                                       },
+          "passwordButtonTxt": "Password",
+                            "@Password": {
+                             "description": "PasswordButton"
+                                                                }
+
 
 }
