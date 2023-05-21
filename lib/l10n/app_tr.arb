@@ -46,6 +46,28 @@
           "alertDialogWarningUserNotFound": "Kullanıcı bulunamadı, lütfen email yada şifrenizi doğru girdiğinizden emin olun",
                          "@alertDialogWarningUserEmailNotFound": {
                           "description": "warning user to correct input credentials"
-                           }
+                           },
+           "forgetPassword": "Şifremi Unuttum",
+                                    "@alertDialogWarningUserEmailNotFound": {
+                                     "description": "Forget Password"
+                                      },
+            "send": "Gönder",
+                     "@send": {
+                      "description": "send"
+                         },
+             "alertDialogResetPasswordEmailValidateError": "Lütfen geçerli bir mail adresi giriniz",
+                                 "@alertDialogResetPasswordEmailValidateError": {
+                                  "description": "alertDialogResetPasswordEmailValidateError"
+                                     },
+              "alertDialogResetPasswordEmailValidateSend": "Şifre yenileme linki mail adresine gönderildi",
+                                       "@alertDialogResetPasswordEmailValidateSend": {
+                                        "description": "alertDialogResetPasswordEmailValidate"
+                                        },
+               "resetPasswordEnterYourEmail": "Mail Adresinizi Giriniz",
+                                                  "@resetPasswordEnterYourEmail": {
+                                                   "description": "aresetPasswordEnterYourEmail"
+                                                   }
+
+
 
 }

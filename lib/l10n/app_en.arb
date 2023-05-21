@@ -46,7 +46,28 @@
           "alertDialogWarningUserNotFound": " User not found.Please make sure to input correct format email or password.",
                 "@alertDialogWarningUserEmailNotFound": {
                  "description": "warning user to correct input credentials"
-                  }
+                  },
+          "forgetPassword": "Forget password ?",
+                          "@alertDialogWarningUserEmailNotFound": {
+                           "description": "Forget Password"
+                            },
+          "send": "Send",
+                                    "@send": {
+                                     "description": "send"
+                                      },
+
+          "alertDialogResetPasswordEmailValidateError": "Please enter the validate e-mail",
+                                           "@alertDialogResetPasswordEmailValidateError": {
+                                            "description": "alertDialogResetPasswordEmailValidateError"
+                                               },
+          "alertDialogResetPasswordEmailValidateSend": "Your password link sended your email adress,please check your mail",
+                          "@alertDialogResetPasswordEmailValidateSend": {
+                           "description": "alertDialogResetPasswordEmailValidate"
+                           },
+           "resetPasswordEnterYourEmail": "Enter Your Email Adress",
+                                    "@resetPasswordEnterYourEmail": {
+                                     "description": "aresetPasswordEnterYourEmail"
+                                     }
 
 
 }
