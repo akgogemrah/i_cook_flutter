@@ -1,5 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:i_do_cook/Screens/EmailSignPage.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../Services/AuthService.dart';
@@ -68,6 +69,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                       ElevatedButton(
                         onPressed: () {
                           Navigator.of(ctx).pop();
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailSignInPage()));
                         },
                         child: Text(
                             AppLocalizations.of(context).alertDialogOk
