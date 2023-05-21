@@ -70,7 +70,11 @@
                "dontYouHaveAnaAccount": "Henüz hesabınız yok mu ?",
                       "@rdontYouHaveAnaAccount": {
                        "description": "dontYouHaveAnaAccount"
-                             }
+                             },
+               "alreadyHaveAccount": "Zaten bir hesabın var mı ?",
+                          "@alreadyHaveAccount": {
+                           "description": "YouHaveAnaAccount"
+                         }
 
 
 
