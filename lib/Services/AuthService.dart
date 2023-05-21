@@ -5,24 +5,25 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 class Auth extends ChangeNotifier{
+  final user = FirebaseAuth.instance.currentUser;
   String? kulanici;
-  final _firebaseAuth=FirebaseAuth.instance;
+  final firebaseAuth=FirebaseAuth.instance;
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
   Future<User?> signInAnonymously()async{
-    final userCredentials= await _firebaseAuth.signInAnonymously();
+    final userCredentials= await firebaseAuth.signInAnonymously();
     kulanici=userCredentials.user!.uid;
     return userCredentials.user;
   }
 
   Future<User?> createUserWithEmailAndPassword(
       String email, String password) async {
-    final userCredentials = await _firebaseAuth.createUserWithEmailAndPassword(
+    final userCredentials = await firebaseAuth.createUserWithEmailAndPassword(
         email: email, password: password);
     kulanici=userCredentials.user!.uid;
     return userCredentials.user;
   }
   Future<User?> signInWithEmailAndPassword(String email, String password) async {
-    final userCredentials = await _firebaseAuth.signInWithEmailAndPassword(
+    final userCredentials = await firebaseAuth.signInWithEmailAndPassword(
         email: email, password: password);
     kulanici=userCredentials.user!.uid;
     return userCredentials.user;
@@ -40,17 +41,17 @@ class Auth extends ChangeNotifier{
         idToken: googleAuth?.idToken,
       );
       // Once signed in, return the UserCredential
-      UserCredential userCredential = await _firebaseAuth.signInWithCredential(
+      UserCredential userCredential = await firebaseAuth.signInWithCredential(
           credential);
       return userCredential.user;
     }
     return null;
   }
   Future<void> signOut() async {
-    await _firebaseAuth.signOut();
+    await firebaseAuth.signOut();
   }
   Stream<User?> authStatus() {
-    return _firebaseAuth.authStateChanges();
+    return firebaseAuth.authStateChanges();
   }
   authStateChanges() {}
 }
