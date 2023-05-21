@@ -43,7 +43,7 @@
                             "@Password": {
                              "description": "PasswordButton"
                                                                 },
-          "alertDialogWarningUserNotFound": " User not found.Please make sure to input correct format email or password.",
+          "alertDialogWarningUserNotFound": "User not found.Please make sure to input correct format email or password.",
                 "@alertDialogWarningUserEmailNotFound": {
                  "description": "warning user to correct input credentials"
                   },
@@ -67,7 +67,11 @@
            "resetPasswordEnterYourEmail": "Enter Your Email Adress",
                                     "@resetPasswordEnterYourEmail": {
                                      "description": "aresetPasswordEnterYourEmail"
-                                     }
+                                     },
+           "dontYouHaveAnaAccount": "Dont you have an account yet ?",
+                                 "@rdontYouHaveAnaAccount": {
+                                  "description": "dontYouHaveAnaAccount"
+                                        }
 
 
 }
