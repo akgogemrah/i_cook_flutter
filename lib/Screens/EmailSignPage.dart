@@ -2,10 +2,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:i_do_cook/Screens/EmailSignUp.dart';
 import 'package:i_do_cook/Screens/ResetPasswordPage.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../Services/AuthService.dart';
+import '../Styles/TexFieldStyles.dart';
 class EmailSignInPage extends StatelessWidget {
   const EmailSignInPage({Key? key}) : super(key: key);
   @override
@@ -29,26 +31,9 @@ class EmailSignInPage extends StatelessWidget {
               padding: const EdgeInsets.only(right: 20,left: 20,top: 10,bottom: 10),
               child: Container(
                 // to give Shodow
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ],
-                ),
+                decoration: buildBoxDecorationAuthTextField(),
                 child: TextField(
-                  decoration: InputDecoration(
-                    suffix: Icon(Icons.local_pizza_rounded,color: Colors.red),
-                    label: Text("Email"),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                  ),
+                  decoration: buildInputDecorationMailTextField(),
 
                   onChanged: (email){
                     emailController.text=email;
@@ -61,31 +46,11 @@ class EmailSignInPage extends StatelessWidget {
               padding: const EdgeInsets.only(right: 20,left: 20,top: 10,bottom: 10),
               //  TO GIVE SHADOW
               child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ],
-                ),
+                decoration: buildBoxDecorationAuthTextField(),
                 //passwordTextField
                 child: TextField(
                   obscureText: true,
-                  decoration: InputDecoration(
-                    suffix: FaIcon(FontAwesomeIcons.burger,color: Colors.deepOrange),
-                    label: Text(
-                      AppLocalizations.of(context).passwordButtonTxt,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-
-                  ),
+                  decoration: buildInputDecorationPasswordTextField(context),
                   onChanged: (password){
                     passwordController.text=password;
                   },
@@ -137,10 +102,31 @@ class EmailSignInPage extends StatelessWidget {
 
             }, child: Text(
               AppLocalizations.of(context).forgetPassword
+            )),
+            // Dont you have an account yet
+
+            SizedBox(height: 10,),
+
+            OutlinedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.transparent),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpWithEmail()));
+            }, child: Text(
+             AppLocalizations.of(context).dontYouHaveAnaAccount,
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold
+                  ),
             ))
+
           ],
         ),
       ),
     );
   }
+
+
+
+
+
+
 }
