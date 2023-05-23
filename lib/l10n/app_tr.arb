@@ -75,7 +75,7 @@
                           "@alreadyHaveAccount": {
                            "description": "YouHaveAnaAccount"
                          },
-               "makeYourOwnFood": "Cook Your Own Food",
+               "makeYourOwnFood": "Yemeğini Pişir",
                          "@makeYourOwnFood": {
                            "description": "Yemeğini Pişir"
                                           },
