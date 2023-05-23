@@ -11,7 +11,8 @@ class OnBoarding extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
       home: OnBoardingSlider(
-        headerBackgroundColor: Colors.white,
+        controllerColor: Colors.black,
+        headerBackgroundColor: buildOnBoardingPageBackGroundColor(),
         finishButtonText: AppLocalizations.of(context).loginButtonTxt,
         onFinish: (){
           Navigator.push(context, MaterialPageRoute(builder: (context)=>AuthPage()));
@@ -19,13 +20,14 @@ class OnBoarding extends StatelessWidget {
         finishButtonStyle: FinishButtonStyle(
           backgroundColor: Colors.black,
         ),
+        pageBackgroundColor: buildOnBoardingPageBackGroundColor(),
         skipTextButton: IconButton(
-          icon: Icon(Icons.skip_next),
+          icon: Icon(Icons.skip_next,color: Colors.black,size: 40),
           onPressed: (){},
         ),
 
         background: [
-          Center(child: SizedBox(width: 400,child: Image.asset('assets/cooking_man.gif'))),
+          Center(child: SizedBox(width: 400,child: Image.asset('assets/cooking_woman.png'))),
           Center(child: SizedBox(width: 400,child: Image.asset('assets/make_food.png'))),
           Center(child: SizedBox(width: 400,child: Image.asset('assets/create_video.png'))),
           Center(child: SizedBox(width: 400,child: Image.asset('assets/share_recipe.png'))),
@@ -43,9 +45,12 @@ class OnBoarding extends StatelessWidget {
                 SizedBox(
                   height: 480,
                 ),
-                Text(
-                  AppLocalizations.of(context).makeYourOwnFood,
-                  style: buildOnBoardingBodyTextStyle(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    AppLocalizations.of(context).makeYourOwnFood,
+                    style: buildOnBoardingBodyTextStyle(),
+                  ),
                 ),
               ],
             ),
@@ -119,6 +124,8 @@ class OnBoarding extends StatelessWidget {
       ),
     );
   }
+
+  Color buildOnBoardingPageBackGroundColor() => Colors.white;
 
 
 
