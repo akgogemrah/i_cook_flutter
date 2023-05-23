@@ -99,7 +99,7 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
               OutlinedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailSignInPage()));
               }, child: Text(
-                "Already you have an account ?",
+                AppLocalizations.of(context).alreadyHaveAccount,
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold
