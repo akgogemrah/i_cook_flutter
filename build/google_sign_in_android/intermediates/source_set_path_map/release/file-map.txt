@@ -1,0 +1,15 @@
+io.flutter.plugins.googlesignin.google_sign_in_android-jetified-play-services-auth-20.5.0-0 C:\Users\emrah\.gradle\caches\transforms-3\154abed71bf03397d67fe106ecd84ed3\transformed\jetified-play-services-auth-20.5.0\res
+io.flutter.plugins.googlesignin.google_sign_in_android-jetified-window-1.0.0-beta04-1 C:\Users\emrah\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\res
+io.flutter.plugins.googlesignin.google_sign_in_android-jetified-annotation-experimental-1.1.0-2 C:\Users\emrah\.gradle\caches\transforms-3\6c0c163cc77ae6c91f9f7dfcd179c29c\transformed\jetified-annotation-experimental-1.1.0\res
+io.flutter.plugins.googlesignin.google_sign_in_android-core-1.6.0-3 C:\Users\emrah\.gradle\caches\transforms-3\7e9df2ac2213a6bd3cef0f2f27870d79\transformed\core-1.6.0\res
+io.flutter.plugins.googlesignin.google_sign_in_android-jetified-play-services-base-18.0.1-4 C:\Users\emrah\.gradle\caches\transforms-3\aba8f806953ea3dd8f794da3aeb78a12\transformed\jetified-play-services-base-18.0.1\res
+io.flutter.plugins.googlesignin.google_sign_in_android-jetified-window-java-1.0.0-beta04-5 C:\Users\emrah\.gradle\caches\transforms-3\ae81e06d24c799147c26814497a2a305\transformed\jetified-window-java-1.0.0-beta04\res
+io.flutter.plugins.googlesignin.google_sign_in_android-jetified-play-services-basement-18.2.0-6 C:\Users\emrah\.gradle\caches\transforms-3\f5aeeb70e4aa208ac830e747eaf33ddc\transformed\jetified-play-services-basement-18.2.0\res
+io.flutter.plugins.googlesignin.google_sign_in_android-pngs-7 C:\Users\emrah\AndroidStudioProjects\i_do_cook\build\google_sign_in_android\generated\res\pngs\release
+io.flutter.plugins.googlesignin.google_sign_in_android-resValues-8 C:\Users\emrah\AndroidStudioProjects\i_do_cook\build\google_sign_in_android\generated\res\resValues\release
+io.flutter.plugins.googlesignin.google_sign_in_android-rs-9 C:\Users\emrah\AndroidStudioProjects\i_do_cook\build\google_sign_in_android\generated\res\rs\release
+io.flutter.plugins.googlesignin.google_sign_in_android-mergeReleaseResources-10 C:\Users\emrah\AndroidStudioProjects\i_do_cook\build\google_sign_in_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.googlesignin.google_sign_in_android-mergeReleaseResources-11 C:\Users\emrah\AndroidStudioProjects\i_do_cook\build\google_sign_in_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.googlesignin.google_sign_in_android-merged_res-12 C:\Users\emrah\AndroidStudioProjects\i_do_cook\build\google_sign_in_android\intermediates\merged_res\release
+io.flutter.plugins.googlesignin.google_sign_in_android-main-13 C:\Users\emrah\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in_android-6.1.14\android\src\main\res
+io.flutter.plugins.googlesignin.google_sign_in_android-release-14 C:\Users\emrah\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in_android-6.1.14\android\src\release\res
