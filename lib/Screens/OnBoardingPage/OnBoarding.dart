@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:i_do_cook/Screens/AuthPage.dart';
 
 import '../../Styles/OnboardingStyle/OnboardingStyle.dart';
 import '../../Styles/TexFieldStyles.dart';
@@ -12,6 +13,9 @@ class OnBoarding extends StatelessWidget {
       home: OnBoardingSlider(
         headerBackgroundColor: Colors.white,
         finishButtonText: AppLocalizations.of(context).loginButtonTxt,
+        onFinish: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>AuthPage()));
+        },
         finishButtonStyle: FinishButtonStyle(
           backgroundColor: Colors.black,
         ),
