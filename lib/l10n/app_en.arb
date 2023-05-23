@@ -75,7 +75,27 @@
            "alreadyHaveAccount": "Already you have an account ?",
                                             "@alreadyHaveAccount": {
                                              "description": "YouHaveAnaAccount"
-                                                   }
+                                                   },
+            "makeYourOwnFood": "Cook Your Own Food",
+                                                       "@makeYourOwnFood": {
+                                                        "description": "makeYourOwnFood"
+                                                              },
+            "prepareYourRecipe": "Prepare Your Special Recipe",
+                    "@prepareYourRecipe": {
+                     "description": "prepareYourRecipe"
+                      },
+            "prepareYourRecipeVideo": "Take Your Recipe Video",
+                                "@prepareYourRecipeVideo": {
+                                 "description": "prepareYourRecipeVideo"
+                                  },
+            "orTakePictures": "or take pictures",
+                                            "@orTakePictures": {
+                                             "description": "orTakePictures"
+                                              },
 
+              "earnPoint": "Earn Points and Stand Out With Your Points",
+                                    "@earnPoint": {
+                                     "description": "earnPoint"
+                                       }
 
 }

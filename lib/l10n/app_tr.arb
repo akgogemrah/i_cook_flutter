@@ -74,8 +74,28 @@
                "alreadyHaveAccount": "Zaten bir hesabın var mı ?",
                           "@alreadyHaveAccount": {
                            "description": "YouHaveAnaAccount"
-                         }
+                         },
+               "makeYourOwnFood": "Cook Your Own Food",
+                         "@makeYourOwnFood": {
+                           "description": "Yemeğini Pişir"
+                                          },
+               "prepareYourRecipe": "Özel Tarifini Hazırla",
+                                   "@prepareYourRecipe": {
+                                    "description": "prepareYourRecipe"
+                                     },
+               "prepareYourRecipeVideo": "Tarif Videonu Hazırla",
+                                               "@prepareYourRecipeVideo": {
+                                                "description": "prepareYourRecipeVideo"
+                                                 },
+               "orTakePictures": "ya da fotoğraflarını çek",
+                        "@orTakePictures": {
+                         "description": "orTakePictures"
+                          },
 
+               "earnPoint": "Puanlar Kazan ve Puanlarınla Öne Çık",
+                                                   "@earnPoint": {
+                                                    "description": "orTakePictures"
+                                                      }
 
 
 }
