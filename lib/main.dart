@@ -5,6 +5,8 @@ import 'package:i_do_cook/Model/UserModel.dart';
 import 'package:i_do_cook/Screens/AuthPage.dart';
 import 'package:i_do_cook/Screens/EmailSignPage.dart';
 import 'package:i_do_cook/Screens/EmailSignUp.dart';
+import 'package:i_do_cook/Screens/OnBoardingPage/OnBoarding.dart';
+import 'package:i_do_cook/Screens/ResetPasswordPage.dart';
 import 'package:i_do_cook/Services/AuthService.dart';
 import 'package:provider/provider.dart';
 import 'l10n/l10.dart';
@@ -37,6 +39,7 @@ class MyApp extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
+
       supportedLocales: L10.all,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -44,7 +47,7 @@ class MyApp extends StatelessWidget {
         // Note: "useMaterial3" is not a valid property for the "theme" attribute.
         // If you are using Material Design 3.0, you don't need to specify this property.
       ),
-      home: AuthPage(),
+      home:OnBoarding(),
     );
   }
 }
