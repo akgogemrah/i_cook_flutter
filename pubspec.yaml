@@ -46,6 +46,7 @@ dependencies:
   cloud_firestore: ^4.7.1
   email_validator: ^2.1.17
   font_awesome_flutter: ^10.4.0
+  flutter_onboarding_slider: ^1.0.9
 
 dev_dependencies:
   flutter_test:
