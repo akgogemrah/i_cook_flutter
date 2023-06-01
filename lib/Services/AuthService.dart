@@ -5,6 +5,16 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 class Auth extends ChangeNotifier{
+  bool _isLoggedIn = false;
+  bool get isLoggedIn => _isLoggedIn;
+  void login() {
+    _isLoggedIn = true;
+    notifyListeners();
+  }
+  void logout() {
+    _isLoggedIn = false;
+    notifyListeners();
+  }
   final user = FirebaseAuth.instance.currentUser;
   String? kulanici;
   final firebaseAuth=FirebaseAuth.instance;
@@ -26,6 +36,7 @@ class Auth extends ChangeNotifier{
     final userCredentials = await firebaseAuth.signInWithEmailAndPassword(
         email: email, password: password);
     kulanici=userCredentials.user!.uid;
+
     return userCredentials.user;
   }
   Future<User?> signInWithGoogle() async {
@@ -53,6 +64,6 @@ class Auth extends ChangeNotifier{
   Stream<User?> authStatus() {
     return firebaseAuth.authStateChanges();
   }
-  authStateChanges() {}
+
 }
 
