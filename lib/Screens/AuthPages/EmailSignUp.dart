@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:i_do_cook/Model/UserModel.dart';
-import 'package:i_do_cook/Screens/EmailSignPage.dart';
+import 'package:i_do_cook/Screens/AuthPages/EmailSignPage.dart';
 import 'package:i_do_cook/Services/AuthService.dart';
 import 'package:i_do_cook/Styles/TexFieldStyles.dart';
 import 'package:provider/provider.dart';
@@ -71,6 +71,7 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
                       Provider.of<UserModel>(context,listen: false).password!
                   );
                   Provider.of<UserModel>(context,listen: false).addUser();
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpWithEmail()));
                 }
                 else{
                   return showDialog(

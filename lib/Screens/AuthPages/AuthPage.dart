@@ -1,10 +1,14 @@
+import 'dart:async';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_localization/flutter_localization.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import '../Services/AuthService.dart';
+import '../../Services/AuthService.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import '../../Widgets/Buttons/EmailSignInButton.dart';
+import '../../Widgets/Buttons/Google_SignInButton.dart';
 import 'EmailSignPage.dart';
 
 class AuthPage extends StatefulWidget {
@@ -12,11 +16,12 @@ class AuthPage extends StatefulWidget {
   @override
   State<AuthPage> createState() => _AuthPageState();
 }
-
 class _AuthPageState extends State<AuthPage> {
 
   @override
   Widget build(BuildContext context) {
+
+
     final Size size = MediaQuery.of(context).size;
     final bool isLargeScreen = size.width > 600;
     // Background Container
@@ -74,68 +79,13 @@ class _AuthPageState extends State<AuthPage> {
               SizedBox(height: 30,),
               //SigningGoogle
               Padding(
-                padding: const EdgeInsets.only(right: 20,left: 20),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      shape: StadiumBorder(),
-                      backgroundColor: Colors.white70
-                  ),
-                  onPressed: () async {
-                    await Provider.of<Auth>(context, listen: false).signInWithGoogle();
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FaIcon(
-                        FontAwesomeIcons.google,
-                        color: Colors.indigo,
-                      ),
-                      SizedBox(width: 20,),
-                      Center(
-                        child: Text(
-                          AppLocalizations.of(context).googleSignIn,
-                          style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.black
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                padding: const EdgeInsets.only(left: 20,right: 20),
+                child: GoogleSignInButton(context),
               ),
               //SigningEmail
               Padding(
                 padding: const EdgeInsets.only(left: 20,right: 20),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      shape: StadiumBorder(),
-                      backgroundColor: Colors.white70
-                  ),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailSignInPage()));
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.email,
-                        color: Colors.red,
-                      ),
-                      SizedBox(width: 20,),
-                      Center(
-                        child: Text(
-                          AppLocalizations.of(context).loginWithEmail,
-                          style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w700
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                child: EmailSignInButton(context),
               ),
             ],
           ),
@@ -143,5 +93,9 @@ class _AuthPageState extends State<AuthPage> {
       ),
     );
   }
+
+
+
+
 }
 Color AuthPagetxt=Colors.black;

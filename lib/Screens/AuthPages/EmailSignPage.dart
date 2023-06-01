@@ -1,15 +1,22 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:i_do_cook/Screens/EmailSignUp.dart';
-import 'package:i_do_cook/Screens/ResetPasswordPage.dart';
+import 'package:i_do_cook/Screens/AuthPages/EmailSignUp.dart';
+import 'package:i_do_cook/Screens/AuthPages/ResetPasswordPage.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import '../Services/AuthService.dart';
-import '../Styles/TexFieldStyles.dart';
-class EmailSignInPage extends StatelessWidget {
+import '../../Services/AuthService.dart';
+import '../../Styles/TexFieldStyles.dart';
+
+import 'package:i_do_cook/HomePage.dart';
+class EmailSignInPage extends StatefulWidget {
   const EmailSignInPage({Key? key}) : super(key: key);
+
+  @override
+  State<EmailSignInPage> createState() => _EmailSignInPageState();
+}
+
+class _EmailSignInPageState extends State<EmailSignInPage> {
   @override
   Widget build(BuildContext context) {
     TextEditingController emailController=TextEditingController();
@@ -63,13 +70,22 @@ class EmailSignInPage extends StatelessWidget {
               child: ElevatedButton(onPressed: ()
               async
               {
-
                 try {
                   await Provider.of<Auth>(context,listen: false).signInWithEmailAndPassword(
                       emailController.text,
                       passwordController.text,
                   );
-                } on FirebaseAuthException catch (e) {
+
+                  setState(() {
+                    Provider.of<Auth>(context, listen: false).login();
+                    Provider.of<Auth>(context, listen: false).isLoggedIn;
+                  });
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage( )));
+                  print(Provider.of<Auth>(context, listen: false).isLoggedIn);
+                }
+
+
+                on FirebaseAuthException catch (e) {
                   showDialog(
                     context: context,
                     builder: (ctx) => AlertDialog(
@@ -90,6 +106,7 @@ class EmailSignInPage extends StatelessWidget {
                     ),
                   );
                 }
+
               },
                 child: Text(
                   AppLocalizations.of(context).loginButtonTxt
@@ -123,10 +140,4 @@ class EmailSignInPage extends StatelessWidget {
       ),
     );
   }
-
-
-
-
-
-
 }
