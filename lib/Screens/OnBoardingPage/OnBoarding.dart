@@ -2,11 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:i_do_cook/Screens/AuthPage.dart';
+import 'package:i_do_cook/HomePage.dart';
+import 'package:i_do_cook/Screens/AuthPages/AuthPage.dart';
+import 'package:provider/provider.dart';
 
+import '../../Services/AuthService.dart';
 import '../../Styles/OnboardingStyle/OnboardingStyle.dart';
 import '../../Styles/TexFieldStyles.dart';
-class OnBoarding extends StatelessWidget {
+class OnBoarding extends StatefulWidget {
+  @override
+  State<OnBoarding> createState() => _OnBoardingState();
+}
+
+class _OnBoardingState extends State<OnBoarding> {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
@@ -126,8 +134,4 @@ class OnBoarding extends StatelessWidget {
   }
 
   Color buildOnBoardingPageBackGroundColor() => Colors.white;
-
-
-
-
 }
