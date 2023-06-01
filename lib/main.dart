@@ -1,14 +1,14 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:i_do_cook/HomePage.dart';
 import 'package:i_do_cook/Model/UserModel.dart';
-import 'package:i_do_cook/Screens/AuthPage.dart';
-import 'package:i_do_cook/Screens/EmailSignPage.dart';
-import 'package:i_do_cook/Screens/EmailSignUp.dart';
+import 'package:i_do_cook/Screens/AuthPages/EmailSignPage.dart';
 import 'package:i_do_cook/Screens/OnBoardingPage/OnBoarding.dart';
-import 'package:i_do_cook/Screens/ResetPasswordPage.dart';
-import 'package:i_do_cook/Services/AuthService.dart';
+import 'package:i_do_cook/Widgets/OnBoardWidget.dart';
 import 'package:provider/provider.dart';
+import 'Screens/AuthPages/AuthPage.dart';
+import 'Services/AuthService.dart';
 import 'l10n/l10.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -23,6 +23,7 @@ void main() async{
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => Auth()),
     ChangeNotifierProvider(create: (context) => UserModel()),
+
   ],
   child: const MyApp()));
 }
@@ -44,10 +45,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple),
-        // Note: "useMaterial3" is not a valid property for the "theme" attribute.
-        // If you are using Material Design 3.0, you don't need to specify this property.
       ),
-      home:OnBoarding(),
+      home:Onboard()
+
     );
   }
 }
