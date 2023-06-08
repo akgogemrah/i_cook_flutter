@@ -2,9 +2,11 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:i_do_cook/HomePage.dart';
+import 'package:i_do_cook/Model/RecipeModel.dart';
 import 'package:i_do_cook/Model/UserModel.dart';
 import 'package:i_do_cook/Screens/AuthPages/EmailSignPage.dart';
 import 'package:i_do_cook/Screens/OnBoardingPage/OnBoarding.dart';
+import 'package:i_do_cook/Screens/UserPages/AddingRecipePage.dart';
 import 'package:i_do_cook/Widgets/OnBoardWidget.dart';
 import 'package:provider/provider.dart';
 import 'Screens/AuthPages/AuthPage.dart';
@@ -23,7 +25,7 @@ void main() async{
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => Auth()),
     ChangeNotifierProvider(create: (context) => UserModel()),
-
+    ChangeNotifierProvider(create: (context) => RecipeModel()),
   ],
   child: const MyApp()));
 }
@@ -46,7 +48,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple),
       ),
-      home:Onboard()
+      home:AuthPage()
 
     );
   }

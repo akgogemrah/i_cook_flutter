@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:i_do_cook/Screens/AuthPages/EmailSignUp.dart';
 import 'package:i_do_cook/Screens/AuthPages/ResetPasswordPage.dart';
+import 'package:i_do_cook/Screens/UserPages/AddingRecipePage.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../Services/AuthService.dart';
@@ -76,14 +77,10 @@ class _EmailSignInPageState extends State<EmailSignInPage> {
                       passwordController.text,
                   );
 
-                  setState(() {
-                    Provider.of<Auth>(context, listen: false).login();
-                    Provider.of<Auth>(context, listen: false).isLoggedIn;
-                  });
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage( )));
-                  print(Provider.of<Auth>(context, listen: false).isLoggedIn);
-                }
 
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateYourRecipe()));
+
+                }
 
                 on FirebaseAuthException catch (e) {
                   showDialog(
@@ -106,7 +103,6 @@ class _EmailSignInPageState extends State<EmailSignInPage> {
                     ),
                   );
                 }
-
               },
                 child: Text(
                   AppLocalizations.of(context).loginButtonTxt
@@ -116,7 +112,6 @@ class _EmailSignInPageState extends State<EmailSignInPage> {
             // Forget password Button
             OutlinedButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>ResetPasswordPage()));
-
             }, child: Text(
               AppLocalizations.of(context).forgetPassword
             )),

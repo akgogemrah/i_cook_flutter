@@ -24,10 +24,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(onPressed: ()async{
               await Provider.of<Auth>(context,listen: false).signOut();
 
-              setState(() {
-                Provider.of<Auth>(context,listen: false).logout();
-              });
-              print(Provider.of<Auth>(context,listen: false).isLoggedIn);
+
 
             }, child:Text("LogOut"))
           ],
